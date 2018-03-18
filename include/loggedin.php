@@ -4,4 +4,5 @@
   <li><a href="index.php?page=include/editnews">Administration</a></li>
   <li><a href="index.php?page=include/editnews">Administration</a></li>
   <li><a href="index.php?page=include/editnews">Administration</a></li>
+  <li><a href="index.php?page=include/editnews">Administration</a></li>
 </ul>
