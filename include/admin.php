@@ -8,10 +8,15 @@ if (!$_SESSION['isLoggedIn'] === true) {
 }
 
 ?>
-<div class="vertical-menu">
-  <h1>Adminstration</h1>
-<a class="active" href="#home">Home</a>
-<a href="#news">News</a>
-<a href="#contact">Contact</a>
-<a href="#about">About</a>
-</div>
+<body >
+    <div id="center">
+        <?php
+          if (isset($_GET['page'])) {
+              include($_GET['page'] . '.php');
+          } else {
+              header("Location: index.php?page=include/frontpage");
+          }
+        ?>
+    </div>
+</body>
+</html>
