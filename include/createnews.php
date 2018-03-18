@@ -1,4 +1,4 @@
-<form action="admin/insertNews.php" method="post">
+<form action="include/insertNews.php" method="post">
     <p>
         <label for="title">Titel:</label>
         <input type="text" name="title" id="title">
