@@ -1,6 +1,6 @@
 <div id="center">
     <div id="div1">
-        <h1 id="omk"> 
+        <h1 id="omk">
             Om Klubben
         </h1>
         <p id="omt">
@@ -8,14 +8,14 @@
         </p>
 
         <p id="omt">
-            Klubben blev stiftet i slutningen af 2015 og har lige siden oplevet en stor fremgang i medlemstallet. Vi lægger vægt på, at være en kajakklub for alle. Vi ønsker at skabe en god motionskultur og et godt fællesskab i klubben gennem hyggelige fællesture og sociale arrangementer.
+            Klubben blev stiftet i slutningen af 2015 og har lige siden oplevet en stor fremgang i medlemstallet. Vi lÃ¦gger vÃ¦gt pÃ¥, at vÃ¦re en kajakklub for alle. Vi Ã¸nsker at skabe en god motionskultur og et godt fÃ¦llesskab i klubben gennem hyggelige fÃ¦llesture og sociale arrangementer.
         </p>
         <p id="omt">
-            KKP ligger i Århus Havn. Går du fra Banegården, tager det cirka 10 minutter til fods at komme til kajakklubben.
-            Århus Havn tilbyder perfekt rovand til begynderinstruktion og almindelige ture eller træning. Der er ingen store bølger i kanalen, hvilket gør det meget begyndervenligt.
+            KKP ligger i Ã…rhus Havn. GÃ¸r du fra BanegÃ¥rden, tager det cirka 10 minutter til fods at komme til kajakklubben.
+            Ã…rhus Havn tilbyder perfekt rovand til begynderinstruktion og almindelige ture eller trÃ¦ning. Der er ingen store bÃ¸lger i kanalen, hvilket gÃ¸r det meget begyndervenligt.
         </p>
         <p id="omt">
-            Vi glæder os til at se dig på vandet!
+            Vi glÃ¦der os til at se dig pÃ¥ vandet!
         </p>
     </div>
     <div id="div2">
