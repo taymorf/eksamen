@@ -1,7 +1,6 @@
 <?php
 // including the database connection file
-include_once("../conn.php");
-
+	require_once("../conn.php");
 if(isset($_POST['update']))
 {
 
@@ -21,9 +20,10 @@ if(isset($_POST['update']))
 			echo "<font color='red'>Age field is empty.</font><br/>";
 		}
 
+
 	} else {
 		//updating the table
-		$result = mysqli_query($mysqli, "UPDATE arrangementer SET `title`='$name',`text`='$age' WHERE id=$id");
+		$result = mysqli_query($mysqli, "UPDATE arrangementer SET title='$name',text='$age' WHERE id=$id");
 
 		//redirectig to the display page. In our case, it is index.php
 		header("Location: index.php");
@@ -49,16 +49,17 @@ while($res = mysqli_fetch_array($result))
 </head>
 
 <body>
+	<a href="index.php">Home</a>
+	<br/><br/>
 
-
-	<form name="form1" method="post" action="editarr.php">
+	<form name="form1" method="post" action="edit.php">
 		<table border="0">
 			<tr>
-				<td>Name</td>
+				<td>Titel</td>
 				<td><input type="text" name="title" value="<?php echo $name;?>"></td>
 			</tr>
 			<tr>
-				<td>Age</td>
+				<td>Tekst</td>
 				<td><input type="text" name="text" value="<?php echo $age;?>"></td>
 			</tr>
 

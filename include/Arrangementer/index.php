@@ -31,7 +31,7 @@
                 <div class="col-md-12">
                     <div class="page-header clearfix">
                         <h2 class="pull-left">Arrangementer</h2>
-                        <a href="include/Arrangementer/create.php" class="btn btn-success pull-right">Tilføj Arrangementer</a>
+                        <a href="include/arrangementer/create.php" class="btn btn-success pull-right">Tilføj Arrangementer</a>
                     </div>
                     <?php
                     // Include config file
@@ -45,7 +45,6 @@
                                 echo "<thead>";
                                     echo "<tr>";
                                         echo "<th>#</th>";
-                                        echo "<th>img</th>";
                                         echo "<th>title</th>";
                                         echo "<th>date</th>";
                                         echo "<th>text</th>";
@@ -60,14 +59,11 @@
                                         echo "<td>" . $row['title'] . "</td>";
                                         echo "<td>" . $row['date'] . "</td>";
                                         echo "<td>" . $row['text'] . "</td>";
-                                        echo "<td>";
-
-                                        echo "<td>" . $row['price'] . "</td>";
 
                                         echo "<td>";
-                                            echo "<a href='include/read.php?id=". $row['id'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
-                                            echo "<a href='include/update.php?id=". $row['id'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                            echo "<a href='include/delete.php?id=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a href='include/arrangementer/read.php?id=". $row['id'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                            echo "<a href='include/arrangementer/update.php?id=". $row['id'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
+                                            echo "<a href='include/arrangementer/delete.php?id=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
                                     echo "</tr>";
                                 }
