@@ -1,23 +1,15 @@
 <?php
-$link = mysqli_connect("localhost", "root", "mysql", "kajakklubben");
+if(count($_POST)>0) {
+	require_once("conn.php");
 
-// Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
+  $title = mysqli_real_escape_string($conn, $_REQUEST['title']);
+$text = mysqli_real_escape_string($conn, $_REQUEST['text']);
+
+  $sql = "INSERT INTO `news`(`id`, `title`, `date`, `text`) VALUES ('', '$title', NOW(), '$text' )";
+	mysqli_query($conn,$sql);
+	$current_id = mysqli_insert_id($conn);
+	if(!empty($current_id)) {
+		$message = "New User Added Successfully";
+	}
 }
-
-// Escape user inputs for security
-$title = mysqli_real_escape_string($link, $_REQUEST['title']);
-$text = mysqli_real_escape_string($link, $_REQUEST['text']);
-
-// attempt insert query execution
-$sql = "INSERT INTO `news`(`id`, `title`, `date`, `text`) VALUES ('', '$title', NOW(), '$text' )";
-if(mysqli_query($link, $sql)){
-    echo "Records added successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}
-
-// close connection
-mysqli_close($link);
 ?>

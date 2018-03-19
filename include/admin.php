@@ -14,7 +14,7 @@ if (!$_SESSION['isLoggedIn'] === true) {
           if (isset($_GET['page'])) {
               include($_GET['page'] . '.php');
           } else {
-              header("Location: index.php?page=include/frontpage");
+              header("Location: index.php?page=include/adminmain");
           }
         ?>
     </div>

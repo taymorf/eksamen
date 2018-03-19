@@ -16,4 +16,12 @@
     $result = $conn->query($sql);
     $result1 = $conn->query($frontpage);
 $admins = ("SELECT id FROM admins WHERE username = ?");
+
+$databaseHost = 'localhost';
+$databaseName = 'kajakklubben';
+$databaseUsername = 'root';
+$databasePassword = 'mysql';
+
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
 ?>

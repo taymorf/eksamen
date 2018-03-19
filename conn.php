@@ -16,4 +16,12 @@
     $result = $conn->query($sql);
     $result1 = $conn->query($frontpage);
 $admins = ("SELECT id FROM admins WHERE username = ?");
+
+$username = "";
+$email    = "";
+$errors = array();
+
+// connect to the database
+
+
 ?>

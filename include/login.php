@@ -1,5 +1,7 @@
 <?php
 require_once '../conn.php';
+include_once 'logins.php';
+
 
 if ($_POST) {
 	$stmt = $conn->prepare("SELECT id FROM admins WHERE username = ? AND password = ?");
@@ -17,7 +19,9 @@ if ($_POST) {
 }
 
 ?>
-
+<head>
+	<link rel="stylesheet" href="../style.css">
+</head>
     <div class="container">
       <form class="form-signin" method="post" action="">
         <h2 class="form-signin-heading">Please sign in</h2>
