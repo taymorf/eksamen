@@ -26,5 +26,6 @@ $name = "";
 		$_SESSION['isLoggedIn'] = "Address saved";
 		header('location: index.php');
 	}
-
+$sql1 = 	mysqli_query($link, "SELECT `id`, `brand`, `product`, `amount`, `price`, `difficulty`, `img` FROM `kajaktype`");
+$sql2 = 	mysqli_query($link, "SELECT `id`, `img`, `title`, `date`, `text` FROM `arrangementer`");
 ?>

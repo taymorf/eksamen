@@ -30,34 +30,40 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header clearfix">
-                        <h2 class="pull-left">Nyheder</h2>
-                        <a href="include/create.php" class="btn btn-success pull-right">Opret Nyheder</a>
+                        <h2 class="pull-left">Arrangementer</h2>
+                        <a href="include/Arrangementer/create.php" class="btn btn-success pull-right">Tilføj Arrangementer</a>
                     </div>
                     <?php
                     // Include config file
-                    require_once 'config.php';
+                    require_once 'include/config.php';
 
                     // Attempt select query execution
-                    $sql = "SELECT * FROM news";
-                    if($result = mysqli_query($link, $sql)){
+                    $sql2 = "SELECT `id`, `img`, `title`, `date`, `text` FROM `arrangementer`";
+                    if($result = mysqli_query($link, $sql2)){
                         if(mysqli_num_rows($result) > 0){
                             echo "<table class='table table-bordered table-striped'>";
                                 echo "<thead>";
                                     echo "<tr>";
                                         echo "<th>#</th>";
-                                        echo "<th>Titel</th>";
-                                        echo "<th>Tekst</th>";
-                                        echo "<th>Dato</th>";
-
+                                        echo "<th>img</th>";
+                                        echo "<th>title</th>";
+                                        echo "<th>date</th>";
+                                        echo "<th>text</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
                                         echo "<td>" . $row['id'] . "</td>";
+                                        echo ' <img src="img/'.$row['img'].'" class="imgProd"/>';
+                                          echo "</td>";
                                         echo "<td>" . $row['title'] . "</td>";
-                                        echo "<td>" . $row['text'] . "</td>";
                                         echo "<td>" . $row['date'] . "</td>";
+                                        echo "<td>" . $row['text'] . "</td>";
+                                        echo "<td>";
+
+                                        echo "<td>" . $row['price'] . "</td>";
+
                                         echo "<td>";
                                             echo "<a href='include/read.php?id=". $row['id'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
                                             echo "<a href='include/update.php?id=". $row['id'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
@@ -73,7 +79,7 @@
                             echo "<p class='lead'><em>No records were found.</em></p>";
                         }
                     } else{
-                        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                        echo "ERROR: Could not able to execute $sql2. " . mysqli_error($link);
                     }
 
                     // Close connection
